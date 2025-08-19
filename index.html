@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador del Multiverso de Rick y Morty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/2560px-Rick_and_Morty.svg.png" alt="Rick and Morty Logo" class="logo">
+        <h1>Explorador del Multiverso</h1>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-link active" data-tab="characters">Personajes</button>
+        <button class="tab-link" data-tab="locations">Lugares</button>
+        <button class="tab-link" data-tab="episodes">Episodios</button>
+    </nav>
+
+    <main>
+        <div id="characters" class="tab-content active">
+            <div class="filters">
+                <input type="text" id="character-name-filter" placeholder="Filtrar por nombre...">
+                <select id="character-status-filter">
+                    <option value="">Todos los estados</option>
+                    <option value="alive">Vivo</option>
+                    <option value="dead">Muerto</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+            </div>
+            <div id="character-container" class="container"></div>
+            <div class="pagination">
+                <button id="character-prev">Anterior</button>
+                <button id="character-next">Siguiente</button>
+            </div>
+        </div>
+        <div id="locations" class="tab-content">
+            <div class="filters">
+                <input type="text" id="location-name-filter" placeholder="Filtrar por nombre...">
+                <input type="text" id="location-type-filter" placeholder="Filtrar por tipo...">
+                <input type="text" id="location-dimension-filter" placeholder="Filtrar por dimensión...">
+            </div>
+            <div id="location-container" class="container"></div>
+            <div class="pagination">
+                <button id="location-prev">Anterior</button>
+                <button id="location-next">Siguiente</button>
+            </div>
+        </div>
+        <div id="episodes" class="tab-content">
+            <div class="filters">
+                <input type="text" id="episode-name-filter" placeholder="Filtrar por nombre...">
+                <input type="text" id="episode-code-filter" placeholder="Filtrar por código (ej. S01E01)...">
+            </div>
+            <div id="episode-container" class="container"></div>
+            <div class="pagination">
+                <button id="episode-prev">Anterior</button>
+                <button id="episode-next">Siguiente</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Bootcamp de la Fábrica: Programación Full Stack</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
